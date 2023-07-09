@@ -160,7 +160,7 @@ body{
 .skills{
    min-height: auto;
    padding-bottom: 7rem;
-   background: var(--second-bg-color);
+   background: var(--bg-color);
 }
 
 .skills .skills-row{
@@ -191,7 +191,7 @@ body{
    left:0;
    width: 0;
    height: 100%;
-   background: rgb(44, 44, 44);
+   background: var(--second-bg-color);
    z-index: -1;
    transition: .5s;
 }
@@ -261,5 +261,93 @@ body{
 .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span{
    width: 80%;
 }
+.node-icon{
+   padding-left: 5px;
+   width: 60px;
+   height:40px;
+}
+.tool{
+   margin-left: 5px;
+   padding-top: 20px;
+   padding-left:10px;
+   width: 6rem;
+   height: 6rem;
+}
+
+
+.project{
+   background:var(--second-bg-color);
+}
+.project h2{
+   margin-bottom:4rem;
+}
+.project-container{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   align-items: center;
+   gap:2.5rem;
+}
+.project-container .project-box{
+position: relative;
+border-radius: 2rem;
+box-shadow: 0 0 1rem var(--bg-color);
+overflow: hidden;
+display: flex;
+}
+
+.project-box img{
+   width: 100%;
+   transition: .5s ease;
+   
+}
+
+.project-box:hover img{
+   transform:  scale(1.1);
+   opacity: 0.25;
+}
+
+.project-box .project-layer{
+   position: absolute;
+   bottom:0;
+   left:0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(rgba(0,0,0, 0.1),var(--main-color));
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   text-align: center;
+   padding: 0 4rem;
+   transform: translateY(100%);
+   transition: .5s ease;
+}
+.project-box:hover .project-layer{
+   transform: translateY(0);
+}
+
+.project-layer h4{
+   font-size: 3rem;
+}
+.project-layer p{
+   font-size:1.6rem;
+   margin: .3rem 0 1rem;
+}
+
+.project-layer a{
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 5rem;
+   height: 5rem;
+   background: var(--text-color);
+   border-radius: 50%;
+}
+
+.project-layer a i {
+   font-size: 2rem;
+   color: var(--second-bg-color);
+}
+
 
 
