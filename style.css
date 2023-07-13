@@ -78,22 +78,23 @@ body{
  .rounded-image {
    margin-left: 50px;
    margin-right: 50px;
-   border-radius: 50%;
-   overflow: hidden;
+   /* overflow: hidden;
    position: relative;
+   padding-top: 25px; */
  }
  
  .rounded-image img {
    display: block;
    max-width: 100%;
    width: 500px;
-   transition: transform 2s ease;
+   border-radius: 50%;
+   /* transition: transform 2s ease; */
+   animation:  floatImage 4s ease-in-out infinite;
  }
-
- .rounded-image:hover img {
+ /* .rounded-image:hover img {
    transform: scale(1.2);
  }
- 
+
  @keyframes pulse {
    0% {
      transform: scale(1);
@@ -104,8 +105,21 @@ body{
    100% {
      transform: scale(1);
    }
- }
+ } */
 
+@keyframes floatImage {
+   0%{
+      transform: translateY(0);
+   }
+   50%{
+      transform: translateY(-2.4rem);
+   }
+   100%{
+      transform: translateY(0);
+   }
+   
+}
+ 
  
  .home-content h3{
    font-size: 3.2rem;
@@ -407,6 +421,12 @@ display: flex;
    section{
       padding: 10rem 3% 2rem;
    }
+   .project{
+      padding-bottom: 7rem;
+   }
+   .contact{
+      min-height: auto;
+   }
    .footer{
       padding: 2rem 3%;
    }
@@ -460,6 +480,49 @@ display: flex;
       flex-direction: column-reverse;
    }
 
-   
-   
+   .project h2{
+      margin-bottom: 3rem;
+   }
+   .heading-skills{
+      margin-bottom: 3rem;
+   }
+
+   .project-container {
+      grid-template-columns: repeat(2,1fr);
+   }  
+   .techstack-container{
+      grid-template-columns: repeat(2,1fr);
+   }
+}
+
+@media(max-width: 617px){
+   .project-container {
+      grid-template-columns: 1fr;
+   }
+}
+
+@media(max-width: 450px){
+   html{
+      font-size: 50%;
+   }
+
+   .contact form .input-box input{
+      width: 100%;
+   }
+}
+
+@media(max-width: 365px){
+   .rounded-image img{
+      width: 90vw;
+   }
+
+   .footer{
+      flex-direction: column-reverse;
+   }
+
+   .footer p{
+      text-align: center;
+      margin-top: 2rem;
+   }
+
 }

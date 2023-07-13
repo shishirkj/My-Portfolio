@@ -35,3 +35,28 @@ window.onscroll = () => {
     menuIcon.classList.remove('bx-x-circle');
     navbar.classList.remove('active');
 };
+
+//                      scroll reveal
+ ScrollReveal({
+    //  reset: true,
+     distance: '80px',
+     duration: 2000,
+     delay: 200 
+});
+
+//                      Initialize ScrollReveal
+ScrollReveal().reveal('.home-content, .heading', { delay: 200, origin: 'top' });
+
+ScrollReveal().reveal('.rounded-image, .project-box, .contact form, .techstack-container, .heading-skills,.about-content', { delay: 200, origin: 'bottom' });
+
+ScrollReveal().reveal('.home-content h1', { delay: 250, origin: 'left' });
+ScrollReveal().reveal('.home-content p', { delay: 250, origin: 'left' });
+
+//                      typed js
+const typed = new Typed('.multiple-text', {
+    strings: ['Open Source Developer','Full Stack Developer','Backend Developer'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+});
